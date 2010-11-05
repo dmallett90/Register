@@ -1,2 +1,31 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h3>Register for Activities</h3>
+<%= form_for(@user) do |f| %>
+	<fieldset id="name">
+		<%= f.label :first_name %><br/>
+		<%= f.text_field :first_name %><br/>
+		<%= f.label :last_name %><br/>
+		<%= f.text_field :last_name %>
+	</fieldset>
+	<fieldset id="address">
+		<%= f.label :street %><br/>
+		<%= f.text_field :street %><br/>
+		<%= f.label :city %><br/>
+		<%= f.text_field :city %>
+		<!-- f.label :state %><br/>
+		<- - -  f.text_field :state %> <br/> -->
+		<%= f.label :zip %><br/>
+		<%= f.text_field :zip %>
+	</fieldset>
+	<fieldset id="phone">
+		<%= f.label :mobile_phone %><br/>
+		<%= f.text_field :mobile_phone %><br/>
+		<%= f.label :home_phone %><br/>
+		<%= f.text_field :home_phone %>
+		<%= f.label :other_phone %><br/>
+		<%= f.text_field :other_phone %>
+	</fieldset>
+	<fieldset id="email">
+		<%= f.label :email %><br/>
+		<%= f.text_field :email %><br/>
+	</fieldset>	
+<% end %>
