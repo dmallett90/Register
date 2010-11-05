@@ -27,6 +27,10 @@ time, mark, audio, video {
 	font-family: "Helvetica Neue", Helvetica, Arial;
 }
 
+header {
+	-webkit-transition: all .5s ease-in-out;
+}
+
 body {
 	background: black;
 	min-height: 100%;
@@ -37,6 +41,9 @@ body {
 	background-size: 100%;
 	border-radius: 15px;
 	padding-bottom: 15px;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 header {
@@ -52,7 +59,6 @@ h1,h2,h3,h4,h5,h6 {
 h1, h2, section {
 	color: rgb(0, 69, 130);
 	width: 100%;
-	max-width: 640px;	
 	/* border: 1px solid green; */
 }
 
@@ -74,7 +80,8 @@ a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; back
 input, select {
 	font-size: 16px;
 	font-weight: bold;
-	width: 90%;
+	width: 100%;
+	margin-bottom: 10px;
 	background: silver !important;
 	vertical-align:middle;
 	outline:none;
@@ -84,6 +91,7 @@ input, select {
 
 input:focus {
 	background: white !important;
+	border: 1px solid rgb(0, 69, 130);
 }
 
 fieldset {
@@ -109,20 +117,30 @@ fieldset {
 
 @media all and (orientation:landscape) { 
 	h3 {
-		background: rgba(256,256,256,0.7);
 		text-shadow: 0px -1px 1px white;
 	}  
 }
 
+@media all and (orientation:portrait) { 
+	header {
+		height: 90px !important;
+	}
+}
+
+
 @media screen and (max-device-width: 480px) {
 
 header {
-	height: 100px;
+	height: 120px;
 	visibility: hidden;
 }
 
 #wrapper {
 	background: white url(images/ford_header_480.jpg) no-repeat;
+}
+
+input {
+	width: 94%;
 }
 
 #user_submit {
