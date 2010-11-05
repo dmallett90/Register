@@ -1,0 +1,137 @@
+.debug_dump {
+	color:white;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+* {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+body {
+	background: black;
+	min-height: 100%;
+}
+
+#wrapper {
+	background: white url(images/ford_header_1024.jpg) no-repeat;
+	background-size: 100%;
+	border-radius: 15px;
+	padding-bottom: 15px;
+}
+
+header {
+	height: 200px;
+	visibility: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, section {
+	color: rgb(0, 69, 130);
+	width: 100%;
+	max-width: 640px;	
+	/* border: 1px solid green; */
+}
+
+h3 {
+	text-align: center;
+	font-size: 24px;
+	padding: .5em;
+}
+
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+input, select {
+	font-size: 16px;
+	font-weight: bold;
+	width: 90%;
+	background: silver !important;
+	vertical-align:middle;
+	outline:none;
+	border:1px solid black;
+	border-radius: 5px;
+}
+
+input:focus {
+	background: white !important;
+}
+
+fieldset {
+	width: 80%;
+	background: rgb(240, 240, 255);
+	border-radius: 10px;
+	margin: 1em auto 2em auto;
+	padding: 5%;
+	padding-top: 5px;
+}
+
+#user_submit {
+	width: 250px;
+	display: block;
+	color: white;
+	background-color: rgb(0, 69, 130) !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Mobile */
+
+@media all and (orientation:landscape) { 
+	h3 {
+		background: rgba(256,256,256,0.7);
+		padding: .5em;
+		text-shadow: 0px -1px 1px white;
+	}  
+}
+
+@media screen and (max-device-width: 480px) {
+
+header {
+	height: 100px;
+	visibility: hidden;
+}
+
+#wrapper {
+	background: white url(images/ford_header_480.jpg) no-repeat;
+}
+
+#user_submit {
+	color: rgb(0, 69, 130) !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+  
+  /* Prevent iOS, WinMobile from adjusting font size */
+  html { -webkit-text-size-adjust:none; } 
+}

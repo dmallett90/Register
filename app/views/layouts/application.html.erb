@@ -5,17 +5,25 @@
   <title><%= @title %></title>
   <meta name="description" content="User Registration Mobile Web App">
   <meta name="author" content="Michael Critz">
-
+  <link rel="apple-touch-icon" href="<%= image_path 'apple-touch-icon.png' %>">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :all %> <!--  turn this back on for production >, :cache => true %> -->
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+	<div id="wrapper">
+	<header>
+		<h1>Ford</h1>
+		<h2>Drive One</h2>
+	</header>
+<section>
 <%= yield %>
-
-<%= debug(params) if Rails.env.development? %>
+</section>
+</div><!-- end wrapper -->
+<!-- %= debug(params) if Rails.env.development? % -->
 
 </body>
 </html>
