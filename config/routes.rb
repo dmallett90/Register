@@ -3,7 +3,8 @@ Register::Application.routes.draw do
   resources :users
 
   root :to => "pages#home"
-  
+  match '/new'      => 'users#new'
+  match '/register' => 'users#new'
   
   get "pages/home"
 

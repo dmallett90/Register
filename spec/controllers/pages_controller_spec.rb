@@ -11,13 +11,14 @@ describe PagesController do
     
     it "should have the right title" do
       get 'home'
-      response.should have_selector('title', :content => "Home")
+      response.should have_selector('title', :content => "Welcome")
     end
     
     it "should have the right header" do
       get 'home'
-      response.should have_selector('h3', :content => "Home")
+      response.should have_selector('h1', :content => "Welcome")
     end
+    
   end
 
   describe "GET 'about'" do
