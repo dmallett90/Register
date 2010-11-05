@@ -1,6 +1,6 @@
 <% if @user.errors.any? %>
-	<div id="error_explanation">
-		<h3>Oops please fix <%= pluralize(@user.errors.count, "error") %></h3>
+	<div id="error_explanation" class="round">
+		<h3>Oops! Please fix <%= pluralize(@user.errors.count, "error") %></h3>
 		<ul>
 			<% @user.errors.full_messages.each do |message| %>
 			<li><%= message %></li>

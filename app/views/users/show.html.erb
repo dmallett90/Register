@@ -1,2 +1,22 @@
-<h3><%= @user.first_name %>'s Home</h3>
-<p><%= @user.first_name%> <%= @user.last_name %></p>
+<h3>Double Check</h3>
+<h3>Is this information correct?</h3>
+<ul>
+    <!-- % @user.attributes.each do |attribute| % -->
+  <li>First Name <br/><b><%= @user.first_name %></b></li>
+  <li>Last Name <br/><b><%= @user.last_name %></b></li>
+  <li>Street <br/><b><%= @user.street %></b></li>
+  <li>City <br/><b><%= @user.city %></b></li>
+  <li>State<br/><b><%= @user.state %></b></li>
+  <li>Zip <br/><b><%= @user.zip %></b></li>
+  <li>Mobile Phone <br/><b><%= @user.mobile_phone %></b></li>
+  <li>Home Phone <br/><b><%= @user.home_phone %></b></li>
+  <li>Other <br/><b><%= @user.other_phone %></b></li>
+  <li>Email <br/><b><%= @user.email %></b></li>
+</ul>
+
+<nav>
+<ul>
+	<li><%= link_to "Edit", edit_user_path %><li>
+	<li><%= link_to "OK", new_user_path %></li>
+</ul>
+</nav>

@@ -26,8 +26,12 @@ time, mark, audio, video {
 * {
 	font-family: "Helvetica Neue", Helvetica, Arial;
 }
+/* Global */
+.round {
+	border-radius: 15px;
+}
 
-header {
+header, #user_submit {
 	-webkit-transition: all .5s ease-in-out;
 }
 
@@ -39,7 +43,6 @@ body {
 #wrapper {
 	background: white url(images/ford_header_1024.jpg) no-repeat;
 	background-size: 100%;
-	border-radius: 15px;
 	padding-bottom: 15px;
 	max-width: 1024px;
 	margin-left: auto;
@@ -52,20 +55,22 @@ header {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-weight: bold;
 	text-rendering: optimizeLegibility;
 }
 
 h1, h2, section {
 	color: rgb(0, 69, 130);
-	width: 100%;
-	/* border: 1px solid green; */
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 h3 {
+	color: #37a2d8;
 	text-align: center;
-	font-size: 24px;
+	font-size: 36px;
 	padding: .2em;
+	font-weight: lighter;
 }
 
 article, aside, figure, footer, header, 
@@ -77,48 +82,81 @@ blockquote, q { quotes:none; }
 
 a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
 
+/* Forms */
+
 input, select {
+	color: #37a2d8;
 	font-size: 16px;
 	font-weight: bold;
 	width: 100%;
 	margin-bottom: 10px;
-	background: silver !important;
+	background: #daeafa;
 	vertical-align:middle;
 	outline:none;
-	border:1px solid black;
+	border: 1px solid #1b71aa;
 	border-radius: 5px;
+	padding: 4px;
 }
 
 input:focus {
 	background: white !important;
-	border: 1px solid rgb(0, 69, 130);
+	border: 1px solid #2f8ab8;
+	color: #444;
+	-webkit-box-shadow: 0px 0px 5px #37a2d8;
 }
 
 fieldset {
-	width: 80%;
-	background: rgb(240, 240, 255);
+	background: #f5faff;
 	border-radius: 10px;
-	margin: 1em auto 2em auto;
-	padding: 5%;
+	margin: 20px auto 20px auto;
+	padding: 20px;
 	padding-top: 5px;
 }
 
 #user_submit {
+	font-size: 32px;
 	width: 250px;
+	height: 64px;
 	display: block;
 	color: white;
-	background-color: rgb(0, 69, 130) !important;
+	background: #004582 url(images/glossy.png) repeat-x;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+#user_submit:active, #user_submit:hover {
+	background: #37a2d8 url(images/glossy.png) repeat-x !important;
+	-webkit-box-shadow: 0px 0px 5px #004582;
+}
+
+
+/* Conditional */
+
+#error_explanation {
+	color: orange;
+	background: #222;
+}
+
+#error_explanation h3 {
+	color: black;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background: orange url(images/glossy.png) repeat-x;
+	background-size: auto%;
+}
+
+#error_explanation ul li {
+	padding: 10px 10px 14px 10px;
+	list-style: none;
+	font-weight: bold;
+}
 
 /* Mobile */
 
 @media all and (orientation:landscape) { 
-	h3 {
+	/*h3 {
 		text-shadow: 0px -1px 1px white;
-	}  
+	}*/  
 }
 
 @media all and (orientation:portrait) { 
@@ -140,11 +178,10 @@ header {
 }
 
 input {
-	width: 94%;
+	width: 90%;
 }
 
 #user_submit {
-	color: rgb(0, 69, 130) !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
