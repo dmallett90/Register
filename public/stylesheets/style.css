@@ -31,7 +31,7 @@ time, mark, audio, video {
 	border-radius: 15px;
 }
 
-header, #user_submit {
+header, input, #user_submit {
 	-webkit-transition: all .5s ease-in-out;
 }
 
@@ -65,12 +65,16 @@ h1, h2, section {
 	margin-right: auto;
 }
 
-h3 {
-	color: #37a2d8;
+section > h3 {
+	color: white;  /* #37a2d8; */
+	background: rgba(0, 69, 130, 0.7) url(images/glossy.png);
 	text-align: center;
 	font-size: 36px;
 	padding: .2em;
 	font-weight: lighter;
+	border-radius: 7px;
+	margin-bottom: 20px;
+	text-shadow: 0px -1px 1px black;
 }
 
 article, aside, figure, footer, header, 
@@ -80,9 +84,31 @@ nav ul { list-style:none; }
 
 blockquote, q { quotes:none; }
 
-a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+a:visited { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+h3 a, h3 a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a, a:visited {
+	color: rgb(50, 119, 180);
+}
+
+a:hover, a:active {
+	color: #37a2d8;
+}
+
+::selection {
+	background: #004582;
+	color:#fff;
+	text-shadow: none;
+}
 
 /* Forms */
+
+form {
+}
 
 input, select {
 	color: #37a2d8;
@@ -93,12 +119,12 @@ input, select {
 	background: #daeafa;
 	vertical-align:middle;
 	outline:none;
-	border: 1px solid #1b71aa;
+	border: 1px solid #37a2d8;
 	border-radius: 5px;
 	padding: 4px;
 }
 
-input:focus {
+input:focus, input:hover {
 	background: white !important;
 	border: 1px solid #2f8ab8;
 	color: #444;
@@ -106,7 +132,7 @@ input:focus {
 }
 
 fieldset {
-	background: #f5faff;
+	background: rgba(218,234,250,0.5);
 	border-radius: 10px;
 	margin: 20px auto 20px auto;
 	padding: 20px;
@@ -124,9 +150,15 @@ fieldset {
 	margin-right: auto;
 }
 
+#user_optin {
+	width: 20px !important;
+	float: left;
+}
+
 #user_submit:active, #user_submit:hover {
 	background: #37a2d8 url(images/glossy.png) repeat-x !important;
 	-webkit-box-shadow: 0px 0px 5px #004582;
+	margin-top: 20px;
 }
 
 
@@ -135,12 +167,15 @@ fieldset {
 #error_explanation {
 	color: orange;
 	background: #222;
+	border: 1px solid orange;
 }
 
 #error_explanation h3 {
+	font-size: 26px;
+	padding: 12px;
 	color: black;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	background: orange url(images/glossy.png) repeat-x;
 	background-size: auto%;
 }
@@ -161,7 +196,7 @@ fieldset {
 
 @media all and (orientation:portrait) { 
 	header {
-		height: 90px !important;
+		height: 110px !important;
 	}
 }
 

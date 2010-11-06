@@ -3,11 +3,17 @@ require 'spec_helper'
 describe User do
   
   before(:each) do
-    @attr = { :first_name => "Example", :last_name => "User", \
-       :street => "221B Baker St.", :city => "New London", \
-       :state => "CT", :zip => "06320", \
-       :mobile_phone => "666-555-4433", \
-       :email => "me@example.com", :optin => "true" }
+    @attr = {
+        :first_name => "Example",
+        :last_name => "User",
+        :street => "221B Baker St.",
+        :city => "New London",
+        :state => "CT",
+        :zip => "06320",
+        :mobile_phone => "666-555-4433",
+        :email => "me@example.com",
+        :optin => true
+        }
   end
   
   it "should create a new instance given valid attributes" do
@@ -103,6 +109,16 @@ describe User do
       invalid_email_user = User.new(@attr.merge(:email => address))
       invalid_email_user.should be_valid
     end
+  end
+
+  it "should rejectd blank terms and coniditions" do
+    no_optin_user = User.new(@attr.merge(:optin => ""))
+    no_optin_user.should_not be_valid
+  end
+  
+  it "should accept checked terms and conditions" do
+    optin_user = User.new(@attr.merge(:optin => true))
+    optin_user.should be_valid
   end
 
 end

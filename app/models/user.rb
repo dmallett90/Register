@@ -39,4 +39,5 @@ class User < ActiveRecord::Base
                   :length => { :maximum => 5, :minimum => 5 }
   validates :email, :presence => true,
                     :format   => { :with => email_regex }
+  validates :optin, :presence => true
 end

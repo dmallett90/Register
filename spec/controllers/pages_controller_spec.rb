@@ -16,7 +16,7 @@ describe PagesController do
     
     it "should have the right header" do
       get 'home'
-      response.should have_selector('h1', :content => "Welcome")
+      response.should have_selector('h3', :content => "Welcome")
     end
     
   end
