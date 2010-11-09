@@ -90,9 +90,9 @@ describe UsersController do
     end
     
     # it "Should get the right first name" do
-    #   @first_user = User.
+    #   @first_user = User.first.first_name
     #   get 'index'
-    #   response.should have_selector('ul', :content => @first_user.first_name)
+    #   response.should have_selector('ul', :content => @first_name)
     # end
     
   end

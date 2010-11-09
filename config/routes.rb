@@ -5,7 +5,9 @@ Register::Application.routes.draw do
   root :to => "pages#home"
   match '/new'      => 'users#new'
   match '/register' => 'users#new'
-  
+    
+  # match 'users/home' => "pages#home"
+    
   get "pages/home"
 
   get "pages/about"

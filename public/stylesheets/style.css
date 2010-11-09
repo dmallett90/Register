@@ -31,7 +31,7 @@ time, mark, audio, video {
 	border-radius: 15px;
 }
 
-header, input, #user_submit {
+header, input, #user_submit, .button a {
 	-webkit-transition: all .5s ease-in-out;
 }
 
@@ -63,7 +63,7 @@ h1, h2, section {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: rgba(255, 255, 255, .5);
+	background-color: rgba(255, 255, 255, .6);
 	padding: 5px;
 	border-radius: 13px;
 	border-top: 1px solid white;
@@ -81,6 +81,13 @@ section > h3 {
 	border-top-right-radius: 7px;
 	/*margin-bottom: 20px;*/
 	text-shadow: 0px -1px 1px black;
+}
+
+section > h4 {
+	font-size: 34px;
+	font-weight: lighter;
+	color: #333;
+	text-shadow: 0px -1px 1px silver;
 }
 
 article, aside, figure, footer, header, 
@@ -173,6 +180,8 @@ fieldset {
 
 #user_submit {
 	font-size: 32px;
+	text-decoration: none;
+	text-align: center;
 	width: 250px;
 	height: 64px;
 	display: block;
@@ -184,15 +193,35 @@ fieldset {
 	border-radius: 15px;
 }
 
+.button a {
+	font-size: 32px;
+	text-decoration: none;
+	text-align: center;
+	width: 250px;
+	height: 54px;
+	padding-top: 10px;
+	display: block;
+	color: white;
+	background: #004582 url(images/glow.png) no-repeat;
+	background-position: top center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	border-top: 1px solid #004582;
+	-webkit-box-shadow: 0px 0px 15px rgba(255,255,255, 0.5);
+}
+
 #user_optin {
 	width: 20px !important;
 	float: left;
 }
 
-#user_submit:active, #user_submit:hover {
+#user_submit:active, #user_submit:hover, .button a:active, .button a:hover {
 	background: #37a2d8 url(images/glow.png) no-repeat !important;
 	-webkit-box-shadow: 0px 0px 15px #004582;
-	margin-top: 20px;
+	border-top: 1px solid #37a2d8;
 }
 
 /* Data */
@@ -215,6 +244,19 @@ fieldset {
 }
 
 /* Conditional */
+
+.ford {
+	width: 100%;
+	height: 100%;
+	min-height: 1024px;
+	background: #3367bc url(images/ford_1024.jpg) no-repeat !important;
+	background-attachment: center;
+	/*margin-top: -20%;*/
+}
+
+.ford section {
+	margin-top: 25%;
+}
 
 #error_explanation {
 	color: orange;
