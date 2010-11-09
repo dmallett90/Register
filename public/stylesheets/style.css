@@ -63,17 +63,23 @@ h1, h2, section {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: rgba(255, 255, 255, .5);
+	padding: 5px;
+	border-radius: 13px;
+	border-top: 1px solid white;
 }
 
 section > h3 {
 	color: white;  /* #37a2d8; */
-	background: rgba(0, 69, 130, 0.7) url(images/glossy.png);
+	background: #37a2d8 url(images/glow.png) no-repeat;
+	background-position: top center;
 	text-align: center;
-	font-size: 36px;
-	padding: .2em;
+	font-size: 34px;
 	font-weight: lighter;
-	border-radius: 7px;
-	margin-bottom: 20px;
+	border-top: 1px solid #69c5ec;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	/*margin-bottom: 20px;*/
 	text-shadow: 0px -1px 1px black;
 }
 
@@ -108,13 +114,14 @@ a:hover, a:active {
 /* Forms */
 
 form {
+	margin-top: 20px;
 }
 
 input, select {
 	color: #37a2d8;
 	font-size: 16px;
 	font-weight: bold;
-	width: 100%;
+	width: 97%;
 	margin-bottom: 10px;
 	background: #daeafa;
 	vertical-align:middle;
@@ -134,9 +141,34 @@ input:focus, input:hover {
 fieldset {
 	background: rgba(218,234,250,0.5);
 	border-radius: 10px;
-	margin: 20px auto 20px auto;
+	margin: 0px auto 20px auto;
 	padding: 20px;
 	padding-top: 5px;
+}
+
+#name {
+	display: block;
+	width: 35%;
+	float: left;
+	margin-right: 10px;
+}
+
+#state {
+	display: inline-block;
+	width: 20%;
+	float: left;
+	margin-right: 20px;
+}
+
+#zip {
+	display: inline-block;
+	width: 73%;
+}
+
+#phone {
+	width: 45%;
+	float: left;
+	margin-right: 10px;
 }
 
 #user_submit {
@@ -145,9 +177,11 @@ fieldset {
 	height: 64px;
 	display: block;
 	color: white;
-	background: #004582 url(images/glossy.png) repeat-x;
+	background: #004582 url(images/glow.png) no-repeat;
+	background-position: top center;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 15px;
 }
 
 #user_optin {
@@ -156,27 +190,49 @@ fieldset {
 }
 
 #user_submit:active, #user_submit:hover {
-	background: #37a2d8 url(images/glossy.png) repeat-x !important;
-	-webkit-box-shadow: 0px 0px 5px #004582;
+	background: #37a2d8 url(images/glow.png) no-repeat !important;
+	-webkit-box-shadow: 0px 0px 15px #004582;
 	margin-top: 20px;
 }
 
+/* Data */
+
+.user {
+	list-style: none;
+	font-size: 28px;
+	line-height: 26px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.user li {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.user li b {
+	font-size: 28px;
+}
 
 /* Conditional */
 
 #error_explanation {
 	color: orange;
 	background: #222;
-	border: 1px solid orange;
+	margin-top: -20px;
+	margin-bottom: 20px;
+	/*border: 1px solid orange;*/
 }
 
 #error_explanation h3 {
 	font-size: 26px;
 	padding: 12px;
 	color: black;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	background: orange url(images/glossy.png) repeat-x;
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+	background: orange;
+	border-top: 1px solid black;
+	/*background: orange url(images/glow.png) no-repeat;*/
 	background-size: auto%;
 }
 
@@ -184,6 +240,22 @@ fieldset {
 	padding: 10px 10px 14px 10px;
 	list-style: none;
 	font-weight: bold;
+}
+
+/*.field_with_errors {
+	margin-bottom: -18px;
+}*/
+
+.field_with_errors, .field_with_errors input {
+	font-weight: bold;
+	color: #444;
+	width: 100%;
+}
+
+.field_with_errors input {
+	color: black;
+	background: orange;
+	border-color: #f28435 !important;
 }
 
 /* Mobile */
@@ -195,27 +267,31 @@ fieldset {
 }
 
 @media all and (orientation:portrait) { 
-	header {
+/*	header {
 		height: 110px !important;
-	}
+	}*/
 }
 
 
 @media screen and (max-device-width: 480px) {
 
 header {
-	height: 120px;
+	height: 110px;
 	visibility: hidden;
+}
+
+#name, #phone {
+	width: 85% !important;
 }
 
 #wrapper {
 	background: white url(images/ford_header_480.jpg) no-repeat;
 }
 
-input {
+/*input {
 	width: 97%;
 }
-
+*/
 #user_submit {
 	margin-left: auto !important;
 	margin-right: auto !important;

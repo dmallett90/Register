@@ -1,0 +1,10 @@
+<h3><%= @title %></h3>
+<% @all_users.each do |listed_user| %>
+	<ul class="user">
+		<li><%= link_to(listed_user) do %>
+			<b><%= listed_user.first_name %>  <%= listed_user.last_name %></b>
+			<% end %>
+		</li>
+		<li><%= listed_user.city %>, <%= listed_user.state %></li>
+	</ul>
+<% end %>

@@ -66,4 +66,34 @@ describe UsersController do
     end
 
   end
+
+  describe "GET 'index'" do
+    it "should be successful" do
+      get 'index'
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+      get 'index'
+      response.should have_selector('title', :content => "Listing Users")
+    end
+    
+    it "Should have the title in an h3" do
+      get 'index'
+      response.should have_selector('h3', :content => "Listing Users")
+    end
+    
+    it "Should list users" do
+      @user_count = User.count
+      get 'index'
+      response.should have_selector('ul', :count => @user_count)
+    end
+    
+    # it "Should get the right first name" do
+    #   @first_user = User.
+    #   get 'index'
+    #   response.should have_selector('ul', :content => @first_user.first_name)
+    # end
+    
+  end
 end
