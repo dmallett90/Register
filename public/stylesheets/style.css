@@ -31,7 +31,7 @@ time, mark, audio, video {
 	border-radius: 15px;
 }
 
-header, input, #user_submit, .button a {
+header, input, #user_submit, nav ul li, .button a {
 	-webkit-transition: all .5s ease-in-out;
 }
 
@@ -118,6 +118,54 @@ a:hover, a:active {
 	text-shadow: none;
 }
 
+/* Navigation */
+
+nav p {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+nav a, nav a:visited {
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+
+nav li {
+	width: 120px;
+	font-size: 24px;
+	padding: 20px;
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+	background: #004582 url(images/glow.png) no-repeat;
+	background-attachment: center top;
+	border: 1px solid #2f8ab8;
+	-webkit-box-shadow: 0px 0px 5px white;
+}
+
+nav ul li:first-child {
+	background: gray url(images/glow_white.png) no-repeat;
+	color: black !important;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border: 1px solid gray;
+	background-position: 30px 0px;
+}
+
+nav ul li:first-child a {
+	color: #333;
+	text-shadow: 0px -1px 1px white;
+}
+
+nav ul li:last-child {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	text-shadow: 0px -1px 1px #004582;
+	background-position: -100px 0px;
+}
+
 /* Forms */
 
 form {
@@ -145,7 +193,7 @@ input:focus, input:hover {
 	-webkit-box-shadow: 0px 0px 5px #37a2d8;
 }
 
-fieldset {
+fieldset, nav {
 	background: rgba(218,234,250,0.5);
 	border-radius: 10px;
 	margin: 0px auto 20px auto;
@@ -218,7 +266,7 @@ fieldset {
 	float: left;
 }
 
-#user_submit:active, #user_submit:hover, .button a:active, .button a:hover {
+#user_submit:active, #user_submit:hover, .button a:active, .button a:hover, nav ul li:hover {
 	background: #37a2d8 url(images/glow.png) no-repeat !important;
 	-webkit-box-shadow: 0px 0px 15px #004582;
 	border-top: 1px solid #37a2d8;
@@ -303,15 +351,9 @@ fieldset {
 /* Mobile */
 
 @media all and (orientation:landscape) { 
-	/*h3 {
-		text-shadow: 0px -1px 1px white;
-	}*/  
 }
 
 @media all and (orientation:portrait) { 
-/*	header {
-		height: 110px !important;
-	}*/
 }
 
 
@@ -330,15 +372,16 @@ header {
 	background: white url(images/ford_header_480.jpg) no-repeat;
 }
 
-/*input {
-	width: 97%;
+nav ul li {
+	width: 80px;
 }
-*/
+
 #user_submit {
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
   
   /* Prevent iOS, WinMobile from adjusting font size */
-  html { -webkit-text-size-adjust:none; } 
+/*  html { -webkit-text-size-adjust:none; } */
+
 }

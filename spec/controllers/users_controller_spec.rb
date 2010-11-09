@@ -96,4 +96,13 @@ describe UsersController do
     # end
     
   end
+  
+  # describe "GET 'edit'" do
+  #   it "should be successful" do
+  #     @test_user = User.first.to_param
+  #     get :edit, :id => @test_user.id
+  #     response.should be_valid
+  #   end
+  # end
+  
 end

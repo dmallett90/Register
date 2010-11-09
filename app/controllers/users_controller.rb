@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     @title = "Register"
   end
   
+  # def edit
+  #   @style = "standard"
+  #   @user  = User.find(params[:id])
+  #   @title = "Edit Information"
+  # end
+  
   def create
     @style = "standard"
     # raise params[:user].inspect
